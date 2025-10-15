@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Реєстрація</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h2>Реєстрація</h2>
+  <form method="POST">
+    <label>ПІБ:</label>
+    <input type="text" name="fullname" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+
+    <button type="submit">Зареєструватись</button>
+  </form>
+</body>
+</html>

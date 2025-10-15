@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Відео {{ num }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h2>Перегляньте відео №{{ num }}</h2>
+  <video id="vid" width="700" controls>
+    <source src="{{ video_src }}" type="video/mp4">
+  </video>
+  <br>
+  <button id="nextBtn" disabled onclick="location.href='/test/{{ num }}'">Перейти до тесту</button>
+
+  <script>
+    const video = document.getElementById('vid');
+    const btn = document.getElementById('nextBtn');
+    video.addEventListener('ended', () => btn.disabled = false);
+  </script>
+</body>
+</html>
