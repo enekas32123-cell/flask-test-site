@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Тест {{ num }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h2>Тест №{{ num }}</h2>
+  <form method="POST">
+    {% for q in questions %}
+      <div class="question">
+        <p><b>{{ loop.index }}. {{ q.q }}</b></p>
+        {% for opt in q.options %}
+          <label><input type="radio" name="q{{ loop.parent.index0 }}" value="{{ opt }}" required> {{ opt }}</label><br>
+        {% endfor %}
+      </div>
+      <hr>
+    {% endfor %}
+    <button type="submit">Завершити тест</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef3f8;
+  text-align: center;
+  padding: 40px;
+}
+
+h2 {
+  color: #2a4d8f;
+}
+
+form {
+  background: white;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+  text-align: left;
+}
+
+label, input {
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  background: #2a4d8f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background: #ccc;
+}
+
+.error {
+  color: red;
+}
